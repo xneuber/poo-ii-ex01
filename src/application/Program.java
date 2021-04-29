@@ -23,7 +23,7 @@ public class Program {
 		Contratacao c1 = new Contratacao(df.parse("01/01/2020"), Cargo.DIRETOR, f1, p1);
 		Contratacao c2 = new Contratacao(df.parse("11/10/2020"), Cargo.ADMINISTRATIVO, f2, p1);
 		
-		p1.listarContratacoes();
+		p1.listarContratacoes();		
 		
 		c1.contratar();
 		p1.listarContratacoes();

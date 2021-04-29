@@ -101,7 +101,7 @@ public class Projeto {
 		else {
 			System.out.println("Projeto:\n\t"+ this.nome +"\nFuncionários:");
 			for (Contratacao c : this.listaContratacoes ) {
-				System.out.println("\t" + c.getFuncionario() + "[Status: " + c.getStatus() + "]");
+				System.out.println("\t" + c.getFuncionario().getNome() + " [Status: " + c.getStatus() + "]");
 			}
 		}
 	}
