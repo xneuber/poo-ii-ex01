@@ -94,6 +94,7 @@ public class Projeto {
 	}
 	
 	public void listarContratacoes() {
+		System.out.println();
 		System.out.println("***Contratacoes***");
 		if (listaContratacoes.isEmpty()) {
 			System.out.println("Não existem contratações!");

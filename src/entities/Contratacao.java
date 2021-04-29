@@ -60,6 +60,7 @@ public class Contratacao {
 	public void demitir() {
 		if (this.status == Status.CONTRATADO)	{
 			this.status = Status.DEMITIDO;
+			this.projeto.removerContratacao(this);
 		}
 	}
 
