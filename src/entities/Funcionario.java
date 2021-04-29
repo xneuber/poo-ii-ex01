@@ -8,7 +8,7 @@ public class Funcionario {
 	private String numeroDocumento;
 	private TipoDeDocumento documento;
 	
-	public Funcionario(String nome, String numeroDocumento, TipoDeDocumento documento) {
+	public Funcionario(String nome, TipoDeDocumento documento, String numeroDocumento) {
 		super();
 		this.nome = nome;
 		this.numeroDocumento = numeroDocumento;

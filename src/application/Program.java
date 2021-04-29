@@ -1,41 +1,41 @@
 package application;
 
 import entities.Projeto;
+import entities.enums.Cargo;
+import entities.enums.TipoDeDocumento;
 import entities.Funcionario;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
 import entities.Contratacao;
-import entities.Turma;
+
 
 public class Program {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 		
-		Projeto a1 = new Projeto("1", "Caroline");
-		Projeto a2 = new Projeto("2", "Isabelle");
+		SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
 		
-		Turma t1 = new Turma(1, "2021.A"); 
-		Turma t2 = new Turma(2, "2021.B");
+		Projeto p1 = new Projeto ("Construção da Loja XYZ", df.parse("01/01/2020"), df.parse("31/12/2021"));
+		Funcionario f1 = new Funcionario("Dory", TipoDeDocumento.CPF, "999.999.999-00");
+		Funcionario f2 = new Funcionario("Carlini", TipoDeDocumento.CPF, "111.111.111-11");
+		Contratacao c1 = new Contratacao(df.parse("01/01/2020"), Cargo.DIRETOR, f1, p1);
+		Contratacao c2 = new Contratacao(df.parse("11/10/2020"), Cargo.ADMINISTRATIVO, f2, p1);
 		
-		Funcionario d1 = new Funcionario("POO", 72);
-		Funcionario d2 = new Funcionario("BD", 54);
+		p1.listarContratacoes();
 		
-		Contratacao m1 = new Contratacao(a1, t1, d1);
-		Contratacao m2 = new Contratacao(a1, t1, d2);
-		Contratacao m3 = new Contratacao(a2, t2, d1);
+		c1.contratar();
+		p1.listarContratacoes();
 		
-		//Aluno 1
-		a1.listarMatriculas();			
-		m1.confirmar();
-		a1.listarMatriculas();
-		m1.trancar();
-		m2.confirmar();
-		a1.listarMatriculas();
+		c1.demitir();
+		c2.contratar();
 		
-		//Aluno 2
-		a2.listarMatriculas();
-		m3.confirmar();
-		a2.listarMatriculas();
-		m3.reprovar();
-		a2.listarMatriculas();
+		p1.listarContratacoes();
+		
+		
+		
+		
+		
 	}
-
 }

@@ -13,8 +13,8 @@ public class Contratacao {
 	private Projeto projeto;
 	private Funcionario funcionario;
 	
-	public Contratacao(Projeto projeto, Funcionario funcionario, Cargo cargo) {
-		this.data = new Date();
+	public Contratacao(Date data, Cargo cargo, Funcionario funcionario, Projeto projeto) {
+		this.data = data;
 		this.cargo = cargo;
 		this.status = status.PENDENTE;
 		this.projeto = projeto;

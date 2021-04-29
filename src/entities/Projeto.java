@@ -99,15 +99,10 @@ public class Projeto {
 			System.out.println("Não existem contratações!");
 		}
 		else {
+			System.out.println("Projeto:\n\t"+ this.nome +"\nFuncionários:");
 			for (Contratacao c : this.listaContratacoes ) {
-				System.out.println("Projeto:\n\t" + c.getProjeto());
-				System.out.println("\tDisciplina: " + m.getDisciplina().getNome()
-						+ " (Turma: " +  ") "
-						+ " Status: " +  ); 
+				System.out.println("\t" + c.getFuncionario() + "[Status: " + c.getStatus() + "]");
 			}
 		}
-	}
-}
-		
 	}
 }
